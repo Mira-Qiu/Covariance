@@ -34,4 +34,32 @@ row_mean = std(M,ddof = 1, axis = 1)
 print(row_mean)
 ```
 
+## Covariance
+协方差：两个随机变量的联合概率度量，描述两个变量怎样一起变化。
+```py
+cov(X, Y) = E[(X - E[X]).(Y - E[Y])]
+```
+协方差计算为每个随机变量与期望值之差乘积的期望或平均值
+假设X与Y的期望值已经计算出来，协方差可以计算为x值与它的期望值的差值乘以y值
+```py
+cov(X, Y) = sum (x - E[X]) * (y - E[Y]) * 1/n
+```
+样本的协方差可以使用相同的计算方法，修正偏差与方差相同
+```py
+cov(X, Y) = sum (x - E[X]) * (y - E[Y]) * 1/(n - 1)
+```
+NumPy 没有函数可以直接计算两个变量直接的协方差。cov() 函数可以计算矩阵的协方差。默认情况下，cov()函数将计算提供的随机变量之间的无偏差（unbiased)或样本协方差
+```py
+from numpy import array
+from numpy import cov
+x = array([1,2,3,4,5,6,7,8,9])
+print(x)
+y = array([9,8,7,6,5,4,3,2,1])
+print(y)
+Sigma = cov(x,y)[0,1]
+print(Sigma)
+```
+
+
+
 
