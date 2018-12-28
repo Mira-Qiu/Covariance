@@ -6,3 +6,4 @@ col_mean = mean(M,axis = 0)
 print(col_mean)
 row_mean = mean(M, axis =1)
 print(row_mean)
+#mean, expected value / expectation / average
