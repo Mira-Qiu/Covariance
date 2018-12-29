@@ -73,6 +73,32 @@ Sigma = corrcoef(x,y)
 print(Sigma)
 ```
 
+## Covariance Matrix
+协方差矩阵：描述两个或更多随机变量之间的协方差的方形对称矩阵<br>
+<ul> 对角线是每个随机变量的方差</ul><br>
+是两个变量的协方差的泛化，并捕捉数据集中所有变量可以一起变化的方式<br>
+Sigma表示。每对随机变量的协方差计算：
+```py
+Sigma = E[(X - E(X]) . (Y - E[Y])] 
+Sigma(ij) = cov(Xi, Yj)
+```
+协方差矩阵为*分离随机变量矩阵中的结果关系*提供了有用的工具，<br>
+可以用于对变量的进行去相关，或者将其作为变换应用于其它变量。是主成分分析数据简化（PCA）中的关键
+<br>
+```py
+from numpy import array
+from numpy import cov
+x = array([1,2,3,4,5,6,7,8,9])
+print(x)
+y = array([9,8,7,6,5,4,3,2,1])
+print(y)
+Sigma = cov(x,y)
+print(Sigma)
+```
+定义了两个9元素的矢量，根据他们计算无偏协方差矩阵。两组数据设计称一个变量增加，一个减少。<br>
+协方差矩阵广泛用于线性代数和多变量分析
+  
+
 
 
 
