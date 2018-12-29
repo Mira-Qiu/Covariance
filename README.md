@@ -72,6 +72,14 @@ y = array([9,8,7,6,5,4,3,2,1])
 print(y)
 Sigma = corrcoef(x,y)
 print(Sigma)
+
+import matplotlib
+import matplotlib.pyplot as plt
+%matplotlib inline
+matplotlib.style.use('ggplot')
+
+plt.scatter(x,y)
+plt.show()
 ```
 
 ## Covariance Matrix
