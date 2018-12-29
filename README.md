@@ -61,6 +61,7 @@ print(Sigma)
 ```
 可将协方差归一化在-1和1之间的分数，以通过除以X和Y的标准差来使它的大小可解释。结果被称为变量的相关性，也称为皮尔逊相关系数。<br>
 使用np.corrcoef(a)可计算行与行之间的相关系数，np.corrcoef(a,rowvar=0)用于计算各列之间的相关系数，输出为相关系数矩阵。<br>
+Pearson product-moment correlation coefficient，又称作PPMCC或PCCs, 文章中常用r或Pearson's r表示）用于度量两个变量X和Y之间的相关（线性相关），其值介于-1与1之间.<br>
 应用公式0.5\*value+0.5可以将相关系数矩阵的值域由[-1,1]映射为[0,1]。
 ```py
 from numpy import array
@@ -85,6 +86,7 @@ Sigma(ij) = cov(Xi, Yj)
 协方差矩阵为*分离随机变量矩阵中的结果关系*提供了有用的工具，<br>
 可以用于对变量的进行去相关，或者将其作为变换应用于其它变量。是主成分分析数据简化（PCA）中的关键
 <br>
+
 ```py
 from numpy import array
 from numpy import cov
