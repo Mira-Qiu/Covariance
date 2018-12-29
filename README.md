@@ -59,6 +59,23 @@ print(y)
 Sigma = cov(x,y)[0,1]
 print(Sigma)
 ```
+可将协方差归一化在-1和1之间的分数，以通过除以X和Y的标准差来使它的大小可解释。结果被称为变量的相关性，也称为皮尔逊相关系数。<br>
+使用np.corrcoef(a)可计算行与行之间的相关系数，np.corrcoef(a,rowvar=0)用于计算各列之间的相关系数，输出为相关系数矩阵。<br>
+应用公式0.5\*value+0.5可以将相关系数矩阵的值域由[-1,1]映射为[0,1]。
+```py
+from numpy import array
+from numpy import corrcoef
+x = array([1,2,3,4,5,6,7,8,9])
+print(x)
+y = array([9,8,7,6,5,4,3,2,1])
+print(y)
+Sigma = corrcoef(x,y)
+print(Sigma)
+```
+
+
+
+
 
 
 
